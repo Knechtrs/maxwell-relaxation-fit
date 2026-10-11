@@ -4,7 +4,7 @@
 
 Robust fitting of generalized Maxwell models to stress-relaxation curves, with checks that tell you when a fit should not be trusted.
 
-I wrote this for the analysis of viscoelastic stress relaxation in human fracture hematoma and engineered alginate hydrogels in Knecht et al., *Distinct matrix viscoelasticity in bone fracture hematoma steers macrophage phenotype* (*Nature Communications*). The normalized stress is modelled as
+I wrote this for the analysis of viscoelastic stress relaxation in human fracture hematoma and engineered alginate hydrogels in Knecht et al., *Distinct matrix viscoelasticity in bone fracture hematoma steers macrophage phenotype* (*Nature Communications* under revision). The normalized stress is modelled as
 
 ```
 sigma(t) = 1 - sum_i A_i * (1 - exp(-t / tau_i))
