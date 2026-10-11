@@ -1,5 +1,7 @@
 # maxwellfit
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23298133.svg)](https://doi.org/10.5281/zenodo.23298133)
+
 Robust fitting of generalized Maxwell models to stress-relaxation curves, with checks that tell you when a fit should not be trusted.
 
 I wrote this for the analysis of viscoelastic stress relaxation in human fracture hematoma and engineered alginate hydrogels in Knecht et al., *Distinct matrix viscoelasticity in bone fracture hematoma steers macrophage phenotype* (*Nature Communications*). The normalized stress is modelled as
@@ -58,7 +60,9 @@ The tests check parameter recovery for one- and two-element models across noise 
 
 ## Citation
 
-If you use this package, please cite the article above and the archived software release (see `CITATION.cff`; DOI added on release).
+If you use this package, please cite the article above and the archived software release:
+
+> Knecht, R. S. (2026). maxwellfit: Robust Generalized Maxwell Fitting of Stress-Relaxation Curves (v0.1.0). Zenodo. https://doi.org/10.5281/zenodo.23298133
 
 ## License
 

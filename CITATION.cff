@@ -2,8 +2,16 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below, and cite the accompanying article."
 title: "maxwellfit: Robust Generalized Maxwell Fitting of Stress-Relaxation Curves"
 version: 0.1.0
+doi: 10.5281/zenodo.23298133
 date-released: 2026-10-11
 license: MIT
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23298132
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: 10.5281/zenodo.23298133
+    description: "Version 0.1.0, used in the article"
 repository-code: "https://github.com/Knechtrs/maxwell-relaxation-fit"
 authors:
   - family-names: Knecht
