@@ -1,0 +1,15 @@
+Package: maxwellfit
+Title: Robust Generalized Maxwell Fitting of Stress-Relaxation Curves
+Version: 0.1.0
+Authors@R: person("Raphael S.", "Knecht", email = "210419157+Knechtrs@users.noreply.github.com",
+    role = c("aut", "cre"), comment = c(ORCID = "0000-0002-4434-8442"))
+Description: Multi-start, bounded non-linear least-squares fitting of
+    n-element generalized Maxwell models to normalized stress-relaxation data,
+    with model comparison and diagnostics that flag unreliable fits.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1)
+Imports: minpack.lm, stats
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.3.1

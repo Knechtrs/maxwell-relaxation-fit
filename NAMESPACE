@@ -1,0 +1,6 @@
+export(maxwell_model)
+export(log_thin)
+export(fit_maxwell)
+export(compare_maxwell)
+export(fit_maxwell_by_sample)
+S3method(print, maxwell_fit)
