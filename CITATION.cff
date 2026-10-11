@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below, and cite the accompanying article."
+title: "maxwellfit: Robust Generalized Maxwell Fitting of Stress-Relaxation Curves"
+version: 0.1.0
+date-released: 2026-10-11
+license: MIT
+repository-code: "https://github.com/Knechtrs/maxwell-relaxation-fit"
+authors:
+  - family-names: Knecht
+    given-names: Raphael S.
+    orcid: "https://orcid.org/0000-0002-4434-8442"
+keywords:
+  - viscoelasticity
+  - stress relaxation
+  - generalized Maxwell model
+  - Maxwell-Wiechert model
+  - R
+references:
+  - type: article
+    title: "Distinct matrix viscoelasticity in bone fracture hematoma steers macrophage phenotype"
+    journal: "Nature Communications"
+    authors:
+      - family-names: Knecht
+        given-names: Raphael S.
+      - family-names: Kollert
+        given-names: Matthias R.
+      - family-names: Morgan
+        given-names: Duncan M.
+      - family-names: Noom
+        given-names: Anne
+      - family-names: Bucher
+        given-names: Christian H.
+      - family-names: Klotzsch
+        given-names: Enrico
+      - family-names: Mooney
+        given-names: David J.
+      - family-names: Schmidt-Bleek
+        given-names: Katharina
+      - family-names: Duda
+        given-names: Georg N.

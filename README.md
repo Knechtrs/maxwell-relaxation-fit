@@ -2,7 +2,7 @@
 
 Robust fitting of generalized Maxwell models to stress-relaxation curves, with checks that tell you when a fit should not be trusted.
 
-I wrote this for the analysis of viscoelastic stress relaxation in human fracture hematoma and engineered alginate hydrogels (Knecht et al., *Nature Communications*, under revision). The normalized stress is modelled as
+I wrote this for the analysis of viscoelastic stress relaxation in human fracture hematoma and engineered alginate hydrogels in Knecht et al., *Distinct matrix viscoelasticity in bone fracture hematoma steers macrophage phenotype* (*Nature Communications*). The normalized stress is modelled as
 
 ```
 sigma(t) = 1 - sum_i A_i * (1 - exp(-t / tau_i))
@@ -24,7 +24,7 @@ Multi-exponential fits are ill-conditioned: different starting values can conver
 
 ```r
 # install.packages("remotes")
-remotes::install_github("Knechtrs/maxwell-relaxation-fit")
+remotes::install_github("Knechtrs/maxwell-relaxation-fit@v0.1.0")  # version used in the paper
 library(maxwellfit)
 
 fit <- fit_maxwell(time, stress_norm, n_elements = 2, seed = 1)
@@ -42,7 +42,11 @@ fit_maxwell_by_sample(df, id = "sample", time = "time", stress = "load_norm",
                       t_max = 3000, n_elements = 2, seed = 1)
 ```
 
-Preprocessing (Butterworth filtering, normalization to peak load, defining t = 0 at peak load) is done upstream and is not part of this package.
+Preprocessing (Butterworth filtering, normalization to peak load, defining t = 0 at peak load) is done upstream and is not part of this package; the helpers used for the paper are in [ktools](https://github.com/Knechtrs/ktools).
+
+## Use in the manuscript
+
+This package (version 0.1.0) is the fitting code for the article. For the one- and two-element models it reproduces the time constants obtained with the original analysis scripts to within 0.01% for every hematoma and hydrogel sample, with identical residual sums of squares. Models with three or more elements were frequently not identifiable (total relaxation > 1, time constants beyond the recording window, different starts converging to different solutions); `compare_maxwell()` reports these cases as flags.
 
 ## Tests
 
@@ -51,6 +55,10 @@ testthat::test_dir("tests/testthat")
 ```
 
 The tests check parameter recovery for one- and two-element models across noise realisations, consistent tau ordering, that the reported parameters belong to the lowest-RSS start, and that BIC neither under- nor over-fits when noise is independent.
+
+## Citation
+
+If you use this package, please cite the article above and the archived software release (see `CITATION.cff`; DOI added on release).
 
 ## License
 
