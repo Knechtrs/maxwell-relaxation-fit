@@ -20,16 +20,6 @@ Multi-exponential fits are ill-conditioned: different starting values can conver
 | Over-complex models | `compare_maxwell()` reports AIC, BIC and a nested F-test, plus residual lag-1 autocorrelation as a warning sign |
 | Unphysical or unidentifiable fits | flags when `sum(A) > 1`, a tau sits at its bound, or a tau exceeds the recording time |
 
-## Validation on synthetic data
-
-`examples/parameter_recovery.R` simulates curves with known parameters (A = 0.3, 0.5; tau = 20, 800 s; 2 Hz for 3000 s) and checks what the fits recover.
-
-![Parameter recovery and model selection](man/figures/recovery.png)
-
-With independent noise (SD 0.003), 30 replicates recover tau2 = 800.2 ± 0.6 s and tau1 = 20.0 ± 0.07 s, and BIC selects the correct two-element model every time (panel C, left).
-
-Real instrument signals are not independent: after low-pass filtering, consecutive residuals are almost perfectly correlated. With autocorrelated noise of similar size, BIC chooses a spurious third element in 63% of replicates. Thinning the data to 200 log-spaced points helps only partly (47%). Information criteria computed on thousands of correlated points are therefore not sufficient evidence for model order. In practice I also check whether the extra element's time constant is reproducible across samples and whether the RMSE gain exceeds the measurement noise.
-
 ## Usage
 
 ```r
